@@ -1,6 +1,7 @@
   
 import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron'
+import style from "./styles.css";
 
 
 function Header() {
