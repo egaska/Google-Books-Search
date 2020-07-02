@@ -15,7 +15,8 @@ function SearchForm() {
 
   const handleSubmit = () => {
     API.getBook(bookState.searchterm).then(res => {
-        console.log(res)
+        // let test = formatBook(res);
+        console.log(res);
         setBookState({...bookState, results: res})
         console.log(bookState)
     })
@@ -24,12 +25,12 @@ function SearchForm() {
   function formatBook(book){
       
     return {
-        _id: bookData.id,
-        title: bookData.volumeInfo.title,
-        authors: bookData.volumeInfo.authors,
-        description: bookData.volumeInfo.description,
-        image: bookData.volumeInfo.imageLinks.thumbnail,
-        link: bookData.volumeInfo.previewLink
+        _id: book.id,
+        title: book.volumeInfo.title,
+        authors: book.volumeInfo.authors,
+        description: book.volumeInfo.description,
+        image: book.volumeInfo.imageLinks.thumbnail,
+        link: book.volumeInfo.previewLink
     }}
 
   return (

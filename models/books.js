@@ -3,7 +3,8 @@ const mongoose = require("mongoose"),
   Schema = mongoose.Schema
 
   const BookSchema = new Schema({
-    authors:  { type: String, required: true },
+    _id: {type: String},
+    authors:  { type: String },
     description:  { type: String },
     image:  { type: String },
     link:  { type: String, required: true },
